@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewData["Title"] = "Today";
+    ViewData["Year"] = DateTime.Now.Year;
+    ViewData["Month"] = DateTime.Now.Month;
+    ViewData["Day"] = DateTime.Now.Day;
+}
+
+<h1>Today</h1>
+<text>오늘은 @ViewData["Year"]년 @ViewData["Month"]월 @ViewData["Day"]일 입니다.</text>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "DateDays";
+}
+<style>
+    
+</style>
+<h1>DateDays</h1>
+<form method="post">
+
+    <label for="number1">여자(남자)친구와 만난 날 :</label>
+    <input type="date" id="day1" name="day1" required />
+    <br />
+    <label for="number1">특정 날짜의 날 : </label>
+    <input type="date" id="day2" name="day2" required />
+    <br />
+    <input type="submit" value='계산' />
+</form>
+
+
+@if (ViewBag.Result != null)
+{
+    <h3>만난지 @(ViewBag.Result)일이 되는 날 입니다.</h3>
+}

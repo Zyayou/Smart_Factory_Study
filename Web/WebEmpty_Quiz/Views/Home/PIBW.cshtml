@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "PIBW";
+}
+<style>
+    aside{
+        width:300px;
+        float:left;
+    }
+    aside #box{
+        width: 296px;
+        height: 220px;
+        border: solid 1px #dddddd;
+        border-radius: 10px;
+        background-color: #f3f3f3;
+    }
+    h1{
+        margin: 10px 0 0 10px;
+        color: green;
+    }
+    aside #inputI{
+        margin: 10px 0 0 10px;
+    }
+
+    aside #inpo_input {
+        float: left;
+    }
+
+    aside #btn {
+        float: right;
+        margin: 0 45px 0 5px;
+    }
+
+    aside #inpo_input input {
+        width: 200px;
+        height: 25px;
+        border: solid 1px #dddddd;
+    }
+
+    aside #inpo_input li {
+        margin-top: 2px;
+    }
+    aside h3{
+        text-align: center;
+    }
+</style>
+
+<h1>PIBW</h1>
+<form method="post">
+    <aside>
+        <article id="box">
+            <div id="inputI">
+                <ul id="inpo_input">
+                    <li>
+                        <label for="Gender">성별(여성/남성) :</label><br />
+                        <input type="text" id="Gender" name="Gender" required />
+                    </li>
+                    <li>
+                        <label for="Height">키 :</label><br />
+                        <input type="number" id="Height" name="Height" required />
+                    </li>
+                    <li>
+                        <label for="Weight">몸무게 :</label><br />
+                        <input type="number" id="Weight" name="Weight" required />
+                    </li>
+                </ul>
+                <input type="submit" id="btn" value='계산' />
+            </div>
+        </article>
+        <!--
+        <input type="radio" id="option1" name="Gender" value="남성" checked>
+        <label for="option1">남성</label>
+        <input type="radio" id="option2" name="Gender" value="여성">
+            <label for="option2">여성</label>
+        -->
+        @if (ViewBag.Result != null)
+        {
+            <h3>당신은 @(ViewBag.Result)입니다.</h3>
+        }
+    </aside>
+    
+</form>
