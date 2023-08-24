@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function callTenTims(callback){
+            for(var i=0; i<3;i++){
+                callback();
+            }
+        }
+        var callback = function(){
+            alert('함수 호출');
+        }
+
+        callTenTims(callback);
+    </script>
+</body>
+</html>
