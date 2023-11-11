@@ -1,0 +1,27 @@
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+div #bodycontent {
+    padding: 50px;
+    background-color: #D7F6F4;
+}
+
+.line{
+    border-bottom: 1px  solid white;
+}

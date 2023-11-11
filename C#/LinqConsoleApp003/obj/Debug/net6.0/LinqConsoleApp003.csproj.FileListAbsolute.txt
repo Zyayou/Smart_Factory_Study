@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\LinqConsoleApp003\bin\Debug\net6.0\LinqConsoleApp003.exe
+C:\Users\Admin\source\repos\LinqConsoleApp003\bin\Debug\net6.0\LinqConsoleApp003.deps.json
+C:\Users\Admin\source\repos\LinqConsoleApp003\bin\Debug\net6.0\LinqConsoleApp003.runtimeconfig.json
+C:\Users\Admin\source\repos\LinqConsoleApp003\bin\Debug\net6.0\LinqConsoleApp003.dll
+C:\Users\Admin\source\repos\LinqConsoleApp003\bin\Debug\net6.0\LinqConsoleApp003.pdb
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.AssemblyInfo.cs
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.dll
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\refint\LinqConsoleApp003.dll
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.pdb
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\LinqConsoleApp003.genruntimeconfig.cache
+C:\Users\Admin\source\repos\LinqConsoleApp003\obj\Debug\net6.0\ref\LinqConsoleApp003.dll

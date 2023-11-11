@@ -1,0 +1,77 @@
+﻿@model MVC_Snail.Models.number
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<p></p>
+<form method="post" astion="/">
+    <select asp-for="N">
+        <option value="none">=== 선택 ===</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9">9</option>
+        <option value="11">11</option>
+    </select>
+    <input type="submit" value="선택"/>
+</form>
+<p></p>
+@{
+    int N = Model.N;
+    int[,] snail = new int[N, N];
+    int cnt = 1;
+    int dir = 0;
+    int x = 0, y = 0;
+
+    //입력
+    while (cnt <= N * N)
+    {
+        snail[y, x] = cnt;
+        switch (dir) //방향전환
+        {
+            case 0: //right
+                x++;
+                if (x + 1 > N - 1 || snail[y, x + 1] != 0)
+                {
+                    dir = 1;
+                }
+                break;
+            case 1: //down
+                y++;
+                if (y + 1 > N - 1 || snail[y + 1, x] != 0)
+                {
+                    dir = 2;
+                }
+                break;
+            case 2: //left
+                x--;
+                if (x - 1 < 0 || snail[y, x - 1] != 0)
+                {
+                    dir = 3;
+                }
+                break;
+            case 3: //up
+                y--;
+                if (y - 1 < 0 || snail[y - 1, x] != 0)
+                {
+                    dir = 0;
+                }
+                break;
+        }
+        cnt++;
+    }
+}
+<table>
+    @for (int i = 0; i < N; i++)
+    {
+        <tr>
+            @for (int j = 0; j < N; j++)
+            {
+                <td>@snail[i, j]</td>
+            }
+        </tr>
+    }
+</table>

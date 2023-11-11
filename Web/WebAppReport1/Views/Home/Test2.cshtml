@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Test2";
+}
+
+<h1>Test2</h1>
+<h2 id="t1">aaaaaaaaaaa</h2>
+<h2 class="t2">bbbbbbbbbbbbb</h2>
+<h3>ccccccccccccc</h3>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('*').css('color', 'blue');
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('h2#t1').css('color', 'black');
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('h2.t2').css('color', 'red');
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('h3').css('color', 'green');
+    });
+</script>

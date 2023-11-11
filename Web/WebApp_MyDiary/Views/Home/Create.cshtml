@@ -1,0 +1,43 @@
+﻿@model WebApp_MyDiary.Models.Diary
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div id="bodycontent">
+    <h1>추가</h1>
+
+    <h4>Diary</h4>
+    <hr />
+    <div class="row">
+        <div>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <textarea asp-for="Content" class="form-control" rows="10"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <p></p>
+                <div class="form-group text-lg-end">
+                    <input type="submit" value="추가" class="btn btn-outline-dark" />
+                    <button type="button" onclick="location.href='/Home/Index'" class="btn btn-outline-primary">목록</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

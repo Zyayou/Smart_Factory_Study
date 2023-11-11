@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApp_MyDiary.Models.Diary>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="bodycontent">
+    <div>
+        <h1>목록</h1>
+    </div>
+    <div>
+        <p>
+            <button type="button" onclick="location.href='/Home/Create'" class="btn btn-outline-success">새 일기 쓰기</button>
+        </p>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.No)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="line">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td >
+                            @Html.DisplayFor(modelItem => item.No)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td class="text-lg-end">
+                            <button type="button" onclick="location.href='/Home/Edit/@item.No'" class="btn btn-outline-dark">수정</button>
+                            <button type="button" onclick="location.href='/Home/Result/@item.No'" class="btn btn-outline-primary">보기</button>
+                            <button type="button" onclick="location.href='/Home/Delete/@item.No'" class="btn btn-outline-danger">삭제</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

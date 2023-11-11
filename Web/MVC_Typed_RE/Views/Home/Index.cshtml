@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVC_Typed_RE.Models.People>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    @{
+        foreach(var item in Model)
+        {
+            <h2>@item.ID</h2>
+            <h2>@item.Name</h2>
+            <h2>@item.Position</h2>
+            <h2>@item.Salary</h2>
+            <h2>----------------------------</h2>
+        }
+    }
+</div>

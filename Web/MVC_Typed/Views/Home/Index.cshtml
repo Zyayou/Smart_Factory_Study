@@ -1,0 +1,33 @@
+﻿@* model MVC_Typed.Models.Employee *@
+
+@* model List<MVC_Typed.Models.Employee> *@
+
+@model IEnumerable<MVC_Typed.Models.Employee>
+@* 이터레이터 기능*@
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@*
+<h2>@Model.EmpNo</h2>
+<h2>@Model.EmpName</h2>
+<h2>@Model.Designation</h2>
+<h2>@Model.Salary</h2>
+*@
+
+@{
+	foreach(var item in Model)
+	{
+		<h2>@item.EmpNo</h2>
+		<h2>@item.EmpName</h2>
+		<h2>@item.Designation</h2>
+		<h2>@item.Salary</h2>
+		<h2>---------------------------</h2>
+	}
+}
